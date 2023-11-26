@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  python-cmd:
+    build: .
+    volumes:
+      - .:/app
+    tty: true
+    stdin_open: true
+
+    
