@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-action-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kube-action-pod
+  template:
+    metadata:
+      labels:
+        app: kube-action-pod
+    spec:
+      containers:
+      - name: kube-action-node
+        image: jhapranav/kube-action
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        # ports:
+        # - containerPort: <Port>
