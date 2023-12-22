@@ -1,0 +1,6 @@
+dependencies:
+- name: tomcat
+  repository: https://charts.bitnami.com/bitnami
+  version: 10.11.10
+digest: sha256:e65db8ac4efd6cba4595c9e805f5550bae5a46b554ba51c85434b70ab4930016
+generated: "2023-12-22T15:38:09.393273+05:30"
