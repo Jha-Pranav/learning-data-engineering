@@ -1,9 +1,5 @@
 apiVersion: apps/v1
 kind: Deployment
-    {{ .Values.image.pullPolicy | default "SomethingIsThere" | upper | quote}}
-    {{- with .Values.imagePullSecrets }}
-      {{- toYaml . | nindent 2 }}
-    {{- end }}
 metadata:
   name: {{ include "firstchart.fullname" . }}
   labels:

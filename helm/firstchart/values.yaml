@@ -10,7 +10,7 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
-imagePullSecrets: ["secret1","secret2","secret3"]
+imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
@@ -96,3 +96,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# mysql:
+#   enabled: false
+
+tags:
+  - enabled: true
