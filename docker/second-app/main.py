@@ -1,8 +1,8 @@
 from random import randint
 
-maximum = int(input('enter max number : '))
-minimum = int(input('enter min mumber : '))
+maximum = int(input("enter max number : "))
+minimum = int(input("enter min mumber : "))
 
-print(">>"*10)
+print(">>" * 10)
 
-print(randint( minimum,maximum))
+print(randint(minimum, maximum))
