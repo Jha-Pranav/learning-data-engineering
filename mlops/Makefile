@@ -1,13 +1,15 @@
+# Define targets
 .PHONY: tests docs
 
+# Default target
+default: env
+
 dependencies: 
-	@echo "Initializing Git..."
-	git init
 	@echo "Installing dependencies..."
 	poetry install
 	poetry run pre-commit install
 
-env: dependencies
+env:
 	@echo "Activating virtual environment..."
 	poetry shell
 

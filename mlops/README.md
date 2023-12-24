@@ -5,7 +5,7 @@
 ## What I'll Learn
 
 - 🛠️ MLOps Fundamentals
-- 🧰 MLOps Toolbox
+- 🧰 MLOps Toolbox - Cookecutter, Poetry, Makefile , Hydra, pre-commit, 
 - 🚀 Model Versioning with MLFlow
 - 📊 Data Versioning with DVC
 - 🤖 Auto-ML and Low-code MLOps
