@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
@@ -113,7 +115,11 @@ class RareLabelCategoricalEncoder(BaseEstimator, TransformerMixin):
         X = X.copy()
         for feature in self.variables:
             X[feature] = np.where(
-                X[feature].isin(self.encoder_dict_[feature]), X[feature], "Rare"
+                X[feature].isin(
+                    self.encoder_dict_[feature],
+                ),
+                X[feature],
+                "Rare",
             )
 
         return X
@@ -142,7 +148,7 @@ class CategoricalEncoder(BaseEstimator, TransformerMixin):
 
         if len(self.variables) == 1:
             X_enc = self.enc.transform(
-                np.array(X[self.variables[0]]).reshape(-1, 1)
+                np.array(X[self.variables[0]]).reshape(-1, 1),
             ).toarray()
 
         else:

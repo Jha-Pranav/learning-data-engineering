@@ -2,18 +2,18 @@
 
 ## Courses:
 
-- **Course 1:** Learn Docker, Docker Compose, Multi-Container Projects, Deployment, and all about Kubernetes from the ground up!  
+- **Course 1:** Learn Docker, Docker Compose, Multi-Container Projects, Deployment, and all about Kubernetes from the ground up!
   - **Progress:** 🟢 70% Completed
   - **Note:** Kubernetes Networking & AWS deployments are pending.
 
-- **Course 2:** Build, test, and deploy Docker applications with Kubernetes while learning production-style development workflows.  
+- **Course 2:** Build, test, and deploy Docker applications with Kubernetes while learning production-style development workflows.
   - **Progress:** 🟡 25% Completed
   - **Note:** Travis CI required credit card info, so I stopped there. I will revisit after a few days, probably skipping those sections.
 
-- **Course:** Helm Kubernetes Packaging Manager for Developers and DevOps  
+- **Course:** Helm Kubernetes Packaging Manager for Developers and DevOps
   - **Progress:** 🟢 100% Completed
 
-- **Course 1:** Complete MLOps Bootcamp | From Zero to Hero in Python 2022 
+- **Course 1:** Complete MLOps Bootcamp | From Zero to Hero in Python 2022
 
 ## What I'll Learn
 
@@ -31,5 +31,5 @@
 
    ```bash
    git clone https://github.com/Jha-Pranav/ml-engineering.git
- 
+
 🌈 Happy Learning! 🚀

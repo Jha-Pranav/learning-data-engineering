@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import preprocessors as pp
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
@@ -10,19 +12,21 @@ def pipeline(config):
             (
                 "drop_fatures",
                 pp.DropUnecessaryFeatures(
-                    variables_to_drop=config.variables.drop_features
+                    variables_to_drop=config.variables.drop_features,
                 ),
             ),
             (
                 "categorical_to_numerical",
                 pp.CategoricalToNumerical(
-                    variables=config.variables.numerical_vars_from_numerical
+                    variables=config.variables.numerical_vars_from_numerical,
                 ),
             ),
             ("numerical_imputer", pp.NumericalImputer()),
             (
                 "categorical_imputer",
-                pp.CategoricalImputer(variables=config.variables.categorical_vars),
+                pp.CategoricalImputer(
+                    variables=config.variables.categorical_vars,
+                ),
             ),
             # ('temporal_variable',
             #    pp.TemporalVariableEstimator(
@@ -31,18 +35,21 @@ def pipeline(config):
             (
                 "label extraction",
                 pp.LabelExtraction(
-                    variables=config.variables.categorical_label_extraction
+                    variables=config.variables.categorical_label_extraction,
                 ),
             ),
             (
                 "rare label encoder",
                 pp.RareLabelCategoricalEncoder(
-                    tol=0.01, variables=config.variables.categorical_vars
+                    tol=0.01,
+                    variables=config.variables.categorical_vars,
                 ),
             ),
             (
                 "categorical_encoder",
-                pp.CategoricalEncoder(variables=config.variables.categorical_vars),
+                pp.CategoricalEncoder(
+                    variables=config.variables.categorical_vars,
+                ),
             ),
             # ('feature hashing',
             #   FeatureHasher(n_features=10, input_type='string')),
@@ -50,7 +57,7 @@ def pipeline(config):
             #    pp.LogTransformer()),
             ("scaler", MinMaxScaler()),
             ("classifier", LogisticRegression()),
-        ]
+        ],
     )
 
     return match_pipe

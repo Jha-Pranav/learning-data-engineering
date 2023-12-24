@@ -27,7 +27,7 @@ dependencies:
   - name: mysql
     version: 9.15.0
     repository: "https://charts.bitnami.com/bitnami"
-    tags: 
+    tags:
       - enabled
     import-values:
       - child: primary.service

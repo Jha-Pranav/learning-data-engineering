@@ -3,6 +3,7 @@ This is the demo code that uses hydra to access the parameters in under the dire
 
 Author: Khuyen Tran
 """
+from __future__ import annotations
 
 import hydra
 from omegaconf import DictConfig

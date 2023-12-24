@@ -1,0 +1,7 @@
+extends: default
+
+# Specify rules to ignore
+ignore:
+  - key-duplicates
+  - document-start
+  - block-mapping

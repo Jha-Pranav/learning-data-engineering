@@ -99,4 +99,3 @@ mysql:
       NodePort: 32762
   fullnameOverride: docker-mysql
   initdbScriptsConfigMap: mysql-initdb-config
-

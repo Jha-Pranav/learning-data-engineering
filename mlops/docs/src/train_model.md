@@ -7,6 +7,6 @@ Author: Khuyen Tran
 Functions
 ---------
 
-    
+
 `train_model(config: omegaconf.dictconfig.DictConfig)`
 :   Function to train the model

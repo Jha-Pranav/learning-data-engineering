@@ -7,6 +7,6 @@ Author: Khuyen Tran
 Functions
 ---------
 
-    
+
 `process_data(config: omegaconf.dictconfig.DictConfig)`
 :   Function to process the data

@@ -10,8 +10,8 @@ python predict.py
 ```
 # Files in this repository
 * [preprocessors.py](./preprocessors.py): Classes for preprocessing
-* [pipeline.py](./pipeline.py): Pipeline of estimator and transformers for both numerical and categorical values 
-* [train_pipeline.py](./train_pipeline.py): for training 
+* [pipeline.py](./pipeline.py): Pipeline of estimator and transformers for both numerical and categorical values
+* [train_pipeline.py](./train_pipeline.py): for training
 * [predict.py](./predict.py): for preprediction
 * [config.py](./config.py): to save information about the dataset, variables, and pipeline's name
 
@@ -20,4 +20,3 @@ Decision Tree Classifier
 
 # Result
 Achieve perfect accuracy score
-

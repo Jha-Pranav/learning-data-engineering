@@ -6,7 +6,7 @@ dataset:
 pipeline:
   pipeline01: decisiontree
 
-target: 
+target:
   target: match
 
 variables:

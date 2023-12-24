@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import hydra
 import joblib
 import pandas as pd
@@ -14,7 +16,8 @@ def run_training(config):
     current_path = utils.get_original_cwd() + "/"
     # read training data
     data = pd.read_csv(
-        current_path + config.dataset.data, encoding=config.dataset.encoding
+        current_path + config.dataset.data,
+        encoding=config.dataset.encoding,
     )
 
     # divide train and test

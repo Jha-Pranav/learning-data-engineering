@@ -25,14 +25,14 @@ spec:
         image: jhapranav/story-app:3
         # env:
         # - name: VOLUME_FOLDER
-        #   value: story 
+        #   value: story
         env:
           - name: VOLUME_FOLDER
             valueFrom:
               configMapKeyRef:
                 name: data-store-env
                 key: folder
-          
+
         imagePullPolicy: IfNotPresent
         volumeMounts:
           - mountPath: app/story
@@ -81,7 +81,7 @@ spec:
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
-    
+
 ---
 apiVersion: v1
 kind: Service

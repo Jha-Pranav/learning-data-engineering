@@ -1,10 +1,75 @@
 repos:
-  - repo: https://github.com/charliermarsh/ruff-pre-commit
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+    -   id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+    -   id: end-of-file-fixer
+    -   id: check-case-conflict
+    -   id: check-toml
+    -   id: debug-statements
+    -   id: forbid-submodules
+    # # -   id: double-quote-string-fixer
+    -   id: name-tests-test
+        args: [--pytest-test-first]
+    -   id: requirements-txt-fixer
+# -   repo: https://github.com/helm/chart-testing
+#     rev: v3.5.0
+#     hooks:
+#     -  id: ct-lint
+#        args: ['--charts', '.']
+
+-   repo: https://github.com/charliermarsh/ruff-pre-commit
     rev: "v0.0.260"
     hooks:
-      - id: ruff
-        args: [--fix, --exit-non-zero-on-fix]
-  - repo: https://github.com/psf/black
+    - id: ruff
+      args: [--fix]
+-   repo: https://github.com/psf/black
     rev: 23.3.0
     hooks:
-      - id: black
+    - id: black
+-   repo: https://github.com/hhatto/autopep8
+    rev: v2.0.4
+    hooks:
+    -   id: autopep8
+-   repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+    -   id: flake8
+        args: ['--config=mlops/.flake8']
+-   repo: https://github.com/asottile/setup-cfg-fmt
+    rev: v2.5.0
+    hooks:
+    -   id: setup-cfg-fmt
+# -   repo: https://github.com/asottile/reorder-python-imports
+#     rev: v3.12.0
+#     hooks:
+#     -   id: reorder-python-imports
+-   repo: https://github.com/asottile/add-trailing-comma
+    rev: v3.1.0
+    hooks:
+    -   id: add-trailing-comma
+
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v3.15.0
+    hooks:
+    -   id: pyupgrade
+        args: [--py38-plus]
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.7.1
+    hooks:
+    -   id: mypy
+        additional_dependencies: [types-all]
+# # -   repo: https://github.com/mxab/pre-commit-trivy.git
+# #     rev: v0.10.0
+# #     hooks:
+# #     -   id: trivyfs-docker
+# #         args:
+# #           - --skip-dirs
+# #           - ./tests
+# #           - . # last arg indicates the path/file to scan
+# #     -   id: trivyconfig-docker
+# #         args:
+# #           - --skip-dirs
+# #           - ./tests
+# #           - . # last arg indicates the path/file to scan
