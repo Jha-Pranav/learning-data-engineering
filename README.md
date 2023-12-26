@@ -14,6 +14,7 @@
   - **Progress:** 🟢 100% Completed
 
 - **Course 1:** Complete MLOps Bootcamp | From Zero to Hero in Python 2022
+  - **Progress:** 🟡 35% Completed
 
 ## What I'll Learn
 
